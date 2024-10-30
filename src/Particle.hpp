@@ -63,7 +63,7 @@ inline void update(Particle &particle) {
     noiseVal = noise.eval({
         particle.position.x * STRENGTH, particle.position.y * STRENGTH
     });
-    fromAngle(noiseVal * ANGLE_MAG * (M_PIf * 2), particle.vel);
+    fromAngle(noiseVal * ANGLE_MAG * (M_PI * 2), particle.vel);
     setLength(particle.vel, SPEED);
     const float fps = framerate.getFPS();
 
