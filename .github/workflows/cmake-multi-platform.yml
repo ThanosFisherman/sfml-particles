@@ -95,5 +95,5 @@ jobs:
     - name: Upload build files
       uses: actions/upload-artifact@v3
       with:
-        name: build-executable
+        name: build-artifacts-${{ matrix.os }}  # Unique name per OS
         path: ${{ steps.strings.outputs.build-output-dir }}
