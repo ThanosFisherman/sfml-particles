@@ -14,7 +14,7 @@
 //  const val MAX_SIZE = 10800
 
 #define RADIUS 1.0f
-#define STRENGTH 0.0032f
+#define STRENGTH 0.003f
 #define SPEED 100.0f
 #define ANGLE_MAG 1.0f
 #define COLOR_FREQ 1.5f
