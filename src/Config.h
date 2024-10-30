@@ -13,11 +13,11 @@
 //  const val TRANSPARENCY = 1f
 //  const val MAX_SIZE = 10800
 
-#define RADIUS 1.0f
-#define STRENGTH 0.003f
+#define RADIUS 1.5f
+#define STRENGTH 0.00450f
 #define SPEED 100.0f
 #define ANGLE_MAG 1.0f
 #define COLOR_FREQ 1.5f
 #define TRANSPARENCY 255
-#define MAX_SIZE 10800
+#define MAX_SIZE 20800
 #endif //CONFIG_H

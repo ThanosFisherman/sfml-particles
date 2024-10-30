@@ -6,8 +6,9 @@
 
 class ValueNoise {
 public:
-    explicit ValueNoise(const unsigned seed = 2016) {
-        std::mt19937 gen(seed);
+    explicit ValueNoise() {
+        std::random_device rd{};
+        std::mt19937 gen(rd());
         std::uniform_real_distribution<float> distrFloat;
         auto randFloat = std::bind(distrFloat, gen);
 
