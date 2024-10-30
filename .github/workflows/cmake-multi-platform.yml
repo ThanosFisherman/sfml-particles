@@ -46,10 +46,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
+    - uses: openrndr/setup-opengl@v1.1
     - name: install x11 libs
       if: matrix.os == 'ubuntu-latest'
       run: sudo apt-get install -y libxrandr-dev libxcursor-dev libxi-dev libgl1-mesa-dev libudev-dev libvorbis-dev
+    - name: install x11 libs
+      if: matrix.os == 'ubuntu-latest'
+      run: xvfb-run glxinfo
 
     - name: Set reusable strings
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
