@@ -16,7 +16,7 @@ int main() {
 
     sf::Font font;
 
-    if (!font.openFromFile("../assets/OpenSans.ttf")) {
+    if (!font.openFromFile("assets/OpenSans.ttf")) {
         std::cerr << "Error loading font\n";
         return -1;
     }

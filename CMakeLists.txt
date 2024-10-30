@@ -10,5 +10,7 @@ FetchContent_Declare(SFML
         SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(main src/main.cpp)
-target_link_libraries(main PRIVATE SFML::Graphics)
+add_executable(sfml-particles src/main.cpp)
+target_link_libraries(sfml-particles PRIVATE SFML::Graphics)
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets
+        DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
