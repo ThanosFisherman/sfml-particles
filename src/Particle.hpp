@@ -6,7 +6,9 @@
 #define PARTICLE_H
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics.hpp>
-#define _USE_MATH_DEFINES
+#ifndef M_PI
+#define M_PI 3.14159265358979323846 // Define M_PI if it's not defined
+#endif
 #include <cmath>
 #include "Config.h"
 #include "HSBtoRGB.hpp"
