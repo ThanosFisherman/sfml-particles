@@ -6,6 +6,7 @@
 #define PARTICLE_H
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics.hpp>
+#define USE_MATH_DEFINES
 #include <cmath>
 #include "Config.h"
 #include "HSBtoRGB.hpp"
