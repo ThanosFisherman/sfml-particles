@@ -18,14 +18,13 @@
 
 struct Particle {
     sf::Vector2f position;
-     sf::Vector2f vel;
+    sf::Vector2f vel;
     sf::Color color;
 };
 
 
 inline float noiseVal = 0;
 inline Framerate framerate;
-inline ValueNoise noise;
 #endif //PARTICLE_H
 
 
@@ -62,10 +61,8 @@ inline void display(sf::RenderWindow &window, Particle &particle) {
 }
 
 inline void update(Particle &particle) {
-
-    noiseVal = noise.eval({
-        particle.position.x * STRENGTH, particle.position.y * STRENGTH
-    });
+    ValueNoise &valueNoise = ValueNoise::getInstance();
+    noiseVal = valueNoise.noise(particle.position.x * STRENGTH, particle.position.y * STRENGTH);
     fromAngle(noiseVal * ANGLE_MAG * (M_PI * 2), particle.vel);
     setLength(particle.vel, SPEED);
     const float fps = framerate.getFPS();

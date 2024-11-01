@@ -14,10 +14,10 @@ private:
     std::vector<Particle> particles;
     std::random_device rd{};
     std::mt19937 gen{rd()};
-    float width;
-    float height;
     std::uniform_real_distribution<float> distribX;
     std::uniform_real_distribution<float> distribY;
+    float width;
+    float height;
 
 public:
     FlowFields(const float width, const float height) {
