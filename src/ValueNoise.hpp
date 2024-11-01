@@ -38,7 +38,7 @@ private:
     std::vector<float> perlin;
 
     static float scaled_cosine(const float t) {
-        return 0.5f * (1.0f - std::cosf(t * M_PI));
+        return 0.5f * (1.0f - std::cos(t * M_PI));
     }
 
 public:
